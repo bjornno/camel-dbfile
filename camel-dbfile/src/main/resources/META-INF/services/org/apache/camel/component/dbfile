@@ -1,1 +1,1 @@
-class=no.bbs.camel.component.dbfile.DBFileComponent
+class=bjornno.camel.component.dbfile.DBFileComponent
