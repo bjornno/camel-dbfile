@@ -1,4 +1,4 @@
-package bjornno.camel.component.dbfile;
+package com.github.bjornno.dbfile;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.Endpoint;
