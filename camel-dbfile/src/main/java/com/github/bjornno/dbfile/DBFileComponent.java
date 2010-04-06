@@ -27,7 +27,7 @@ public class DBFileComponent extends DefaultComponent {
         if (dataSourceRef != null) {
             dataSource = CamelContextHelper.mandatoryLookup(getCamelContext(), dataSourceRef, DataSource.class);
         }
-        
+
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         IntrospectionSupport.setProperties(jdbcTemplate, parameters, "template.");
 

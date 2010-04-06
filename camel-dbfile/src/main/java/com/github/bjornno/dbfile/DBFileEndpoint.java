@@ -22,14 +22,18 @@ public class DBFileEndpoint extends DefaultEndpoint {
     }
 
     public Consumer createConsumer(Processor processor) throws Exception {
-        throw new UnsupportedOperationException("Not implemented");
+        return new DBFileConsumer(this, processor, jdbcTemplate);
     }
 
     public Producer createProducer() throws Exception {
-        return new DBFileProducer(this, tableName, jdbcTemplate);
+        return new DBFileProducer(this, jdbcTemplate);
     }
 
     public boolean isSingleton() {
         return true;
-    }      
+    }
+
+    public String getTableName() {
+        return tableName;
+    }
 }
